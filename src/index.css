@@ -1,0 +1,264 @@
+body, html, #root{
+  width: 100vw;
+  margin: auto;
+  background-color: rgb(85, 87, 87) ;
+  overflow-x: hidden;
+}
+
+.App{
+  display: grid;
+  grid-template-columns: auto 39rem;
+  justify-content: center;
+  gap: 3rem;
+}
+
+#forms-container{
+  display: flex;
+  color: white;
+  background-color: rgb(94, 95, 95) ;
+  box-shadow: 0 0 2px 6px gray;
+  width: fit-content;
+  margin: 1rem auto;
+  padding:3rem
+}
+
+select{
+  margin:auto .5rem;
+}
+
+#form-submit>button{
+  margin: 1rem 1rem 0 1rem;
+
+}
+
+#reset-all-button:hover{
+  color: aliceblue;
+  background-color: rgb(255, 104, 104);
+  box-shadow: 0 0 3px 3px rgb(255, 104, 104);
+
+}
+
+
+
+textarea{
+  resize: vertical;
+  max-height: 12rem;
+  min-height: 3rem;
+}
+dialog{
+  border: solid rgb(221, 239, 255) 6px;
+  border-radius: 12px;
+}
+.dialog-container>button{
+  border: solid rgb(221, 239, 255)3px;
+}
+
+.dialog-container>button:hover{
+  background-color: rgb(221, 239, 255)
+}
+.dialog-container{
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  width: 20rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.dialog-container>input{
+  width: 60%;
+  font-size: 20px;
+  margin: 1rem 0;
+  background-color: rgb(221, 239, 255);
+  border-radius: 12px;
+}
+
+.dialog-container>label{
+  margin-bottom: -.5rem;
+}
+
+.dialog-container>button{
+  margin: 1rem auto;
+}
+
+.work-data-form, .education-data-form,  .personal-data-form{
+  display: grid;
+  text-align: left;
+  justify-content: center;
+  align-items: center;
+  grid-template-columns: 50% 50%;
+  gap: 10px;
+} 
+
+
+button{
+  background-color: rgb(255, 255, 255);
+  border: none;
+  border-radius: 3px;
+  margin-bottom: 1.2rem;
+  width: fit-content;
+  grid-column: span 2;
+  font-size: 15px;
+  font-weight: bold;
+  
+}
+#form-separator{
+  height: 6px;
+  margin: 3rem 0;
+  background-color: white;
+}
+
+.add-form-button{
+  display: flex;
+  margin: auto auto 1rem auto;
+
+}
+
+button:hover{
+  cursor: pointer;
+  box-shadow: 0 0 3px 3px white;
+}
+
+.work-data-form>input, .education-data-form>input, .personal-data-form>input{
+  font-size: large;
+  border-radius: 12px; 
+  margin: 10px auto;
+  width: 100%;
+} 
+
+#photo{
+  width: 99%;
+}
+.form-labels{
+  text-align: left;
+  font-size: 20px;
+  
+}
+
+.input-missing-info{
+  border: solid rgb(255, 104, 104);
+}
+
+#mockup-container{
+  display: flex;
+  background-color: white;
+  border: solid black;
+  width: auto;
+  height: fit-content;
+  flex-direction: column;
+  margin-top: 1rem;
+} 
+
+h4{
+  margin-bottom: -.5rem;
+}
+
+.mockup-personal-section{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: space-between;
+  margin: 1rem 1rem;
+}
+
+
+#personal-mockup-section-basic-information{
+  margin: auto;
+}
+
+#profile-container{
+  grid-column: span 2;
+  margin: auto 1rem;
+}
+#profile-container>h3{
+  margin-left: -1rem;
+}
+
+.mockup-work-section, .mockup-education-section{
+  text-align: left;
+  margin-left: 2rem;
+  margin-right: 2rem;
+  text-indent: 0;
+  line-break: anywhere;
+}
+
+.section-title>h3, .separator{
+  margin-left: -1rem;
+}
+
+.separator{
+  border: solid black 1px;
+  width: 100%;
+  height: 0;
+  margin: auto;
+}
+
+.separator-container{
+  display: grid;
+  grid-template-columns: 100% 10%;
+  height: 0;
+
+}
+.separator-container>button{
+  max-width: fit-content;
+}
+
+#user-photo{
+  width: 100px;
+  height:100px;
+}
+
+.edit-line-button{
+  background-color: aliceblue;
+  margin-left: 1rem;
+}
+
+.edit-line-button:hover{
+  background-color: rgb(202, 230, 255);
+
+}
+
+input{
+  border: solid white;
+}
+
+input:valid{
+  border: solid white ;
+}
+
+input:disabled{
+  border: none;
+}
+
+@media print{
+  @page{
+    size: A4;
+    margin: 2cm;
+  }
+
+
+  #forms-container, .dialog, button{
+    display: none;
+  }
+
+  hr{
+    color: gray;
+    height: 3px;
+  }
+  .App{
+    display: flex;
+    height: 100%;
+    margin: auto;
+    width: 100%;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  #mockup-container{
+    width: 100%;
+    border: none;
+    margin: auto;
+    
+  }
+  select{
+    display: none;
+  }
+}
